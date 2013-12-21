@@ -11,6 +11,7 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/users', {templateUrl: 'app/partials/users.html', controller: 'UsersCtrl'});
+  $routeProvider.when('/about', {templateUrl: 'app/partials/about.html', controller: 'AboutCtrl'});
   $routeProvider.when('/new', {templateUrl: 'app/partials/newuser.html', controller: 'NewUserCtrl'});
   $routeProvider.otherwise({redirectTo: '/users'});
 }]);
