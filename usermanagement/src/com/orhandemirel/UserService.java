@@ -20,9 +20,9 @@ public class UserService {
 		users = new ArrayList<User>();
 		
 		User u = new User();
-		u.fname = "Selcuk";
-		u.lname = "Demirel";
-		u.phone = "123-456-7890";
+		u.setFname("Selcuk");
+		u.setLname("Demirel");
+		u.setPhone("123-456-7890");
 		users.add(u);
 	}
 	    @GET  
