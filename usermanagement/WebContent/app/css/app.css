@@ -29,10 +29,39 @@
   padding: 0;
 }
 
+.usersContainer{
+	width: 500px;
+	margin-bottom: 5px;
+}
 .userList{
-	
+	width: 500px;
+	border: 0.1em solid black;
+}
+.userList .userListHeader{
+	width: 500px;
+	border-bottom: 0.1em solid black;
 }
 
-.user{
-	
+.userListHeader div{
+	display: inline-block;
+	width: 120px;
+	font-weight:bold;
+}
+
+.user div{
+	display: inline-block;
+	width: 120px;
+}
+
+.userInfo .row span{
+	display: inline-block;
+	width: 100px;
+}
+
+.buttonContainer{
+	display: inline-block;
+	float: right;
+}
+.clear{
+	clear:both;
 }
