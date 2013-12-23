@@ -1,6 +1,7 @@
 package com.orhandemirel;
 
 public class User {
+	private int id;
 	private String fname;
 	private String lname;
 	private String phone;
@@ -29,6 +30,12 @@ public class User {
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

@@ -1,9 +1,19 @@
 <Button ng-click="newUserPage()">Create New User</Button>
 <p>User List</p>
-<ul class="example-animate-container">
-<li class="animate-repeat" ng-repeat="user in users">
-<div>{{user.fname}}</div>
-<div>{{user.lname}}</div>
-<div>{{user.phone}}</div>
-</li>
-</ul>
+<div class="userList">
+	<div class="userListHeader">
+		<div class="fname">First Name</div>
+		<div class="lname">Last Name</div>
+		<div class="phone">Phone Number</div>
+		<div class="actions">Actions</div>
+	</div>
+	<div class="user" ng-repeat="user in users">
+		<div class="fname">{{user.fname}}</div>
+		<div class="lname">{{user.lname}}</div>
+		<div class="phone">{{user.phone}}</div>
+		<div class="actions">
+			<a href="#/edit/{{user.id}}">Edit</a>
+			<a href ng-click="deleteUser(user.id)">Delete</a>
+		</div>
+	</div>
+</div>
