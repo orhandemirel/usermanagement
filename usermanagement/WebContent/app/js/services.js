@@ -3,16 +3,22 @@
 /* Services */
 
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('myApp.services', []).service('userService', function($http){
 	
 	this.getUsers = function(callback){
-		$http.get('rest/users').success(callback);
+		$http({
+			url: 'rest/users',
+			method: "GET",
+			params: {'_t' : new Date().getTime()}
+		}).success(callback);
 	};
 	
 	this.getUser = function(userId, callback){
-		$http.get('rest/users/'  + userId).success(callback);
+		$http({
+			url: 'rest/users/'   + userId,
+			method: "GET",
+			params: {'_t' : new Date().getTime()}
+		}).success(callback);
 	};
 	
 	this.deleteUser = function(userId, callback){
